@@ -18,7 +18,7 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--navy);color:#eef3f9;font-family:var(--sans);font-weight:300;letter-spacing:.2px;overflow-x:hidden}
+  body{margin:0;background:var(--navy);color:#eef3f9;font-family:var(--sans);font-weight:300;letter-spacing:.2px;overflow-x:hidden;font-size:18px}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
   ::selection{background:var(--gold-2);color:var(--navy-d)}
@@ -26,7 +26,7 @@
   @media(max-width:600px){.wrap{padding:0 24px}}
   .serif{font-family:var(--serif)}
 
-  .eyebrow{font-family:var(--serifd);font-weight:600;font-size:11px;letter-spacing:5px;text-transform:uppercase;display:inline-block}
+  .eyebrow{font-family:var(--serifd);font-weight:600;font-size:12.5px;letter-spacing:5px;text-transform:uppercase;display:inline-block}
   .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;padding:16px 32px;cursor:pointer;border:1px solid transparent;transition:.4s;position:relative;overflow:hidden}
   .btn .ar{transition:.3s}.btn:hover .ar{transform:translateX(5px)}
   .btn-solid{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy-d);font-weight:600}
@@ -44,7 +44,7 @@
   .brand img{height:52px;width:auto;transition:.45s;filter:drop-shadow(0 4px 14px rgba(0,0,0,.5))}
   header.sc .brand img{height:42px}
   .navlinks{display:flex;gap:32px;align-items:center}
-  .navlinks a{font-size:12px;letter-spacing:1.5px;color:#e4ebf3;text-transform:uppercase;position:relative;padding:6px 0;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+  .navlinks a{font-size:14.5px;letter-spacing:1.5px;color:#e4ebf3;text-transform:uppercase;position:relative;padding:6px 0;text-shadow:0 1px 8px rgba(0,0,0,.4)}
   .navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-2);transition:.3s}
   .navlinks a:hover::after{width:100%}
   .navright{display:flex;align-items:center;gap:18px}
@@ -73,21 +73,29 @@
   .hero-text .eyebrow{color:var(--gold-2);opacity:0;animation:fade 1s .2s forwards}
   .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,5.2vw,84px);line-height:1;letter-spacing:-1px;color:#fff;margin:22px 0 0}
   .hero h1 em{font-style:italic;color:var(--gold-2)}
-  .hero .lead{font-size:clamp(15px,1.3vw,18px);line-height:1.75;color:#c6d2e0;max-width:46ch;margin:28px 0 0;opacity:0;animation:fade 1.1s .9s forwards}
+  .hero .lead{font-size:clamp(18px,1.6vw,22px);line-height:1.75;color:#c6d2e0;max-width:46ch;margin:28px 0 0;opacity:0;animation:fade 1.1s .9s forwards}
   .hero .acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;opacity:0;animation:fade 1.1s 1.1s forwards}
-  .hero-media{position:relative}
+  .hero-media{position:relative;background:radial-gradient(circle at 58% 44%,#173a60,#0a1c33 72%);display:flex;align-items:center;justify-content:center;overflow:hidden}
   .hero-media .vline{position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--gold-2),transparent);z-index:3}
-  .hero-badge{position:absolute;left:34px;bottom:34px;z-index:3;font-family:var(--serifd);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#e7d9b6;display:flex;align-items:center;gap:12px}
+  .hero-media .art{width:min(74%,440px);position:relative;z-index:2}
+  .hero-media .art::before{content:"";position:absolute;inset:-16%;background:radial-gradient(circle,rgba(231,197,120,.22),transparent 66%);filter:blur(30px);z-index:-1}
+  /* faithful gold line-art images with draw-in reveal */
+  .ink{display:block;width:100%;height:auto;filter:drop-shadow(0 8px 26px rgba(0,0,0,.35))}
+  .ink-down{clip-path:inset(0 0 100% 0);transition:clip-path 2.6s cubic-bezier(.22,1,.36,1)}
+  .ink-right{clip-path:inset(0 100% 0 0);transition:clip-path 2.8s cubic-bezier(.22,1,.36,1)}
+  .drawn .ink-down,.drawn .ink-right{clip-path:inset(0 0 0 0)}
+  .float{animation:fl 7s ease-in-out infinite alternate}
+  @keyframes fl{from{transform:translateY(-10px)}to{transform:translateY(12px)}}
+  .hero-badge{position:absolute;left:34px;bottom:34px;z-index:3;font-family:var(--serifd);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#e7d9b6;display:flex;align-items:center;gap:12px}
   .hero-badge .d{width:30px;height:1px;background:var(--gold-2)}
-  .scrollcue{position:absolute;left:6vw;bottom:34px;z-index:4;display:flex;align-items:center;gap:12px;font-family:var(--serifd);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8fa1b6;opacity:0;animation:fade 1s 1.4s forwards}
+  .scrollcue{position:absolute;left:6vw;bottom:34px;z-index:4;display:flex;align-items:center;gap:12px;font-family:var(--serifd);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8fa1b6;opacity:0;animation:fade 1s 1.4s forwards}
   .scrollcue i{width:46px;height:1px;background:linear-gradient(90deg,var(--gold-2),transparent);transform-origin:left;animation:cue 2.2s ease-in-out infinite}
   @keyframes cue{0%,100%{transform:scaleX(.4);opacity:.4}50%{transform:scaleX(1);opacity:1}}
   @keyframes fade{to{opacity:1}}
   @media(max-width:860px){
     .hero{grid-template-columns:1fr}
-    .hero-media{position:absolute;inset:0;z-index:0}
-    .hero-media::before{content:"";position:absolute;inset:0;background:rgba(7,20,39,.62);z-index:2}
-    .hero-text{position:relative;z-index:3;background:none;padding:150px 24px 110px;min-height:100vh}
+    .hero-media{min-height:64vh;order:-1}
+    .hero-text{background:linear-gradient(135deg,var(--navy),var(--navy-d));padding:140px 24px 80px}
     .hero-media .vline,.scrollcue{display:none}
   }
 
@@ -102,7 +110,7 @@
   h2.t{font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.6vw,62px);line-height:1.04;margin:16px 0 0}
   h2.t em{font-style:italic;color:var(--gold-2)}
   .cream h2.t em{color:var(--gold-onc)}
-  .lead2{font-size:17px;line-height:1.75;margin:20px 0 0}
+  .lead2{font-size:20px;line-height:1.75;margin:20px 0 0}
   .navy .lead2,.navy-d .lead2{color:#b9c7d6}.cream .lead2{color:var(--ink-2)}
 
   /* VISAS editorial rows (asymmetric) */
@@ -110,23 +118,27 @@
   @media(max-width:880px){.visa-grid{grid-template-columns:1fr;gap:30px}}
   .visa-intro{position:sticky;top:120px}
   @media(max-width:880px){.visa-intro{position:static}}
-  .vrow{display:grid;grid-template-columns:auto 1fr;gap:26px;padding:28px 0;border-top:1px solid rgba(20,37,55,.16);cursor:default;transition:.35s}
+  .vrow{display:grid;grid-template-columns:118px 1fr;gap:26px;padding:28px 0;border-top:1px solid rgba(20,37,55,.16);cursor:default;transition:.35s}
+  @media(max-width:520px){.vrow{grid-template-columns:84px 1fr;gap:16px}}
   .vrow:last-child{border-bottom:1px solid rgba(20,37,55,.16)}
-  .vrow .code{font-family:var(--serifd);font-weight:700;font-size:13px;letter-spacing:1px;color:var(--gold-onc);padding-top:6px;white-space:nowrap}
-  .vrow h3{font-family:var(--serif);font-weight:600;font-size:30px;color:var(--ink);margin:0;line-height:1.1;transition:.3s}
-  .vrow p{color:var(--ink-2);font-size:15px;line-height:1.6;margin:8px 0 0;max-width:60ch}
-  .vrow .who{font-size:12px;letter-spacing:.4px;color:var(--gold-onc);margin-top:10px}
+  .vrow .code{font-family:var(--serifd);font-weight:700;font-size:14px;letter-spacing:1px;color:var(--gold-onc);padding-top:6px;white-space:nowrap}
+  .vrow h3{font-family:var(--serif);font-weight:600;font-size:33px;color:var(--ink);margin:0;line-height:1.1;transition:.3s}
+  .vrow p{color:var(--ink-2);font-size:17.5px;line-height:1.62;margin:8px 0 0;max-width:60ch}
+  .vrow .who{font-size:13px;letter-spacing:.4px;color:var(--gold-onc);margin-top:10px}
   .vrow:hover{padding-left:14px}
   .vrow:hover h3{color:var(--gold-onc)}
 
   /* 50 states split */
   .states{display:grid;grid-template-columns:1fr 1fr;min-height:88vh}
   @media(max-width:860px){.states{grid-template-columns:1fr}.states .media{min-height:50vh;order:-1}}
+  .states-map{background:radial-gradient(circle at 50% 45%,#14385d,#0a1c33 72%);display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .states-map .art{width:min(86%,600px);position:relative}
+  .states-map .art::before{content:"";position:absolute;inset:-10%;background:radial-gradient(circle,rgba(231,197,120,.18),transparent 66%);filter:blur(34px);z-index:-1}
   .states-text{display:flex;flex-direction:column;justify-content:center;padding:100px 6vw}
   .states .huge{font-family:var(--serif);font-weight:600;font-size:clamp(120px,18vw,260px);line-height:.8;color:transparent;-webkit-text-stroke:1.4px rgba(216,178,92,.55);margin:0 0 6px}
   .states h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.4vw,46px);color:#fff;line-height:1.1;margin:0}
   .states h2 em{font-style:italic;color:var(--gold-2)}
-  .states p{color:#b9c7d6;font-size:16px;line-height:1.75;margin:18px 0 0;max-width:48ch}
+  .states p{color:#b9c7d6;font-size:18px;line-height:1.75;margin:18px 0 0;max-width:48ch}
 
   /* Larissa split */
   .lar{display:grid;grid-template-columns:1fr 1.1fr;min-height:90vh;align-items:stretch}
@@ -134,10 +146,10 @@
   .lar .media{position:relative}
   .lar .nameplate{position:absolute;left:0;bottom:42px;background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy-d);font-family:var(--serifd);font-size:12px;letter-spacing:2px;padding:12px 22px;z-index:3}
   .lar-text{display:flex;flex-direction:column;justify-content:center;padding:100px 6vw}
-  .lar .role{font-family:var(--serifd);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-onc);margin-top:8px}
-  .lar p{color:var(--ink-2);font-size:16px;line-height:1.8;margin:18px 0 0}
+  .lar .role{font-family:var(--serifd);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-onc);margin-top:8px}
+  .lar p{color:var(--ink-2);font-size:18px;line-height:1.8;margin:18px 0 0}
   .creds{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
-  .cred{font-size:11.5px;letter-spacing:.4px;color:var(--gold-onc);border:1px solid rgba(154,122,44,.4);padding:7px 13px}
+  .cred{font-size:12.5px;letter-spacing:.4px;color:var(--gold-onc);border:1px solid rgba(154,122,44,.4);padding:7px 13px}
 
   /* press marquee */
   .press{overflow:hidden;padding:40px 0;border-top:1px solid rgba(216,178,92,.16);border-bottom:1px solid rgba(216,178,92,.16)}
@@ -153,24 +165,24 @@
   .stat:last-child{border-right:0}
   @media(max-width:760px){.stat{border-right:0;border-bottom:1px solid rgba(216,178,92,.16);padding:40px 20px}}
   .stat .n{font-family:var(--serif);font-weight:600;font-size:clamp(54px,7vw,86px);line-height:1;color:var(--gold-2)}
-  .stat .lb{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#b9c7d6;margin-top:12px}
+  .stat .lb{font-size:13.5px;letter-spacing:1.5px;text-transform:uppercase;color:#b9c7d6;margin-top:12px}
 
   /* process asymmetric */
   .proc-grid{display:grid;grid-template-columns:.8fr 1.5fr;gap:50px}
   @media(max-width:880px){.proc-grid{grid-template-columns:1fr;gap:30px}}
   .pstep{display:grid;grid-template-columns:auto 1fr;gap:24px;padding:26px 0;border-top:1px solid rgba(20,37,55,.16)}
   .pstep .num{font-family:var(--serif);font-style:italic;font-size:38px;color:var(--gold-onc);line-height:1}
-  .pstep h4{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--ink);margin:0}
-  .pstep p{color:var(--ink-2);font-size:15px;line-height:1.6;margin:8px 0 0}
+  .pstep h4{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--ink);margin:0}
+  .pstep p{color:var(--ink-2);font-size:16.5px;line-height:1.6;margin:8px 0 0}
 
   /* awards */
   .agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(216,178,92,.18);border:1px solid rgba(216,178,92,.18);margin-top:46px}
   @media(max-width:820px){.agrid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:520px){.agrid{grid-template-columns:1fr}}
   .award{background:var(--navy);padding:28px 26px}
-  .award .yr{font-family:var(--serifd);font-size:11px;letter-spacing:2px;color:var(--gold-2)}
-  .award .ti{font-family:var(--serif);font-size:20px;color:#fff;margin-top:6px;line-height:1.2}
-  .award .by{font-size:12.5px;color:#8fa1b6;margin-top:5px}
+  .award .yr{font-family:var(--serifd);font-size:12px;letter-spacing:2px;color:var(--gold-2)}
+  .award .ti{font-family:var(--serif);font-size:22px;color:#fff;margin-top:6px;line-height:1.2}
+  .award .by{font-size:13.5px;color:#8fa1b6;margin-top:5px}
 
   /* philosophy */
   .philo{text-align:center}
@@ -186,32 +198,41 @@
   .triage .badge{display:inline-block;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-2);border:1px solid rgba(216,178,92,.45);border-radius:30px;padding:9px 19px;margin-bottom:24px}
   .triage h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4.8vw,58px);color:#fff;line-height:1.08}
   .triage h2 em{font-style:italic;color:var(--gold-2)}
-  .triage p{color:#c6d2e0;font-size:17px;line-height:1.7;margin:18px auto 34px;max-width:58ch}
+  .triage p{color:#c6d2e0;font-size:19px;line-height:1.7;margin:18px auto 34px;max-width:58ch}
 
   /* other + contact */
   .other-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-  .pill{border:1px solid rgba(20,37,55,.2);padding:11px 22px;font-size:13.5px;color:var(--ink-2);transition:.3s}
+  .oa-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid rgba(216,178,92,.2)}
+  @media(min-width:760px){.oa-grid{grid-template-columns:repeat(2,1fr)}}
+  .oa{padding:24px 26px 24px 0;border-bottom:1px solid rgba(216,178,92,.18);transition:.3s}
+  .oa:nth-child(odd){padding-right:40px;border-right:1px solid rgba(216,178,92,.18)}
+  .oa:nth-child(even){padding-left:40px}
+  @media(max-width:640px){.oa-grid{grid-template-columns:1fr}.oa,.oa:nth-child(odd),.oa:nth-child(even){padding:22px 0;border-right:0}}
+  .oa h4{font-family:var(--serif);font-weight:600;font-size:24px;color:#fff;margin:0;transition:.3s}
+  .oa p{color:#9fb2c6;font-size:16px;line-height:1.55;margin:6px 0 0}
+  .oa:hover h4{color:var(--gold-2)}
+  .pill{border:1px solid rgba(20,37,55,.2);padding:12px 24px;font-size:16px;color:var(--ink-2);transition:.3s}
   .pill:hover{border-color:var(--gold-onc);color:var(--ink)}
   .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:50px}
   @media(max-width:820px){.cgrid{grid-template-columns:1fr;gap:34px}}
   .cline{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-bottom:1px solid rgba(20,37,55,.14)}
   .cline svg{width:20px;height:20px;stroke:var(--gold-onc);fill:none;stroke-width:1.5;flex:none;margin-top:3px}
-  .cline .k{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-2)}
-  .cline .v{font-size:17px;color:var(--ink);margin-top:4px}
+  .cline .k{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-2)}
+  .cline .v{font-size:20px;color:var(--ink);margin-top:4px}
   .cline .v a:hover{color:var(--gold-onc)}
   .socials{display:flex;gap:12px;margin-top:24px}
   .socials a{width:44px;height:44px;border:1px solid rgba(20,37,55,.2);border-radius:50%;display:grid;place-items:center;transition:.3s}
   .socials a:hover{border-color:var(--gold-onc);background:rgba(154,122,44,.1)}
   .socials svg{width:18px;height:18px;fill:var(--ink)}.socials a:hover svg{fill:var(--gold-onc)}
   .cta-card{border:1px solid rgba(154,122,44,.3);padding:46px 42px;background:linear-gradient(160deg,#fff,transparent)}
-  .cta-card h3{font-family:var(--serif);font-weight:500;font-size:30px;color:var(--ink);line-height:1.15}
-  .cta-card p{color:var(--ink-2);margin:14px 0 28px;line-height:1.6}
+  .cta-card h3{font-family:var(--serif);font-weight:500;font-size:33px;color:var(--ink);line-height:1.15}
+  .cta-card p{color:var(--ink-2);margin:14px 0 28px;line-height:1.65;font-size:16.5px}
 
   footer{background:var(--navy-d);padding:48px 0 42px;border-top:1px solid rgba(216,178,92,.16)}
   .frow{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
   .frow img{height:54px}
   .fnav{display:flex;gap:24px;flex-wrap:wrap}
-  .fnav a{font-size:12px;letter-spacing:.5px;color:#b9c7d6;text-transform:uppercase}.fnav a:hover{color:var(--gold-2)}
+  .fnav a{font-size:13px;letter-spacing:.5px;color:#b9c7d6;text-transform:uppercase}.fnav a:hover{color:var(--gold-2)}
   .disc{margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);font-size:11.5px;color:#6f8197;line-height:1.7;max-width:94ch}
 
   .wa{position:fixed;right:24px;bottom:24px;z-index:70;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 34px -10px rgba(37,211,102,.6);transition:.3s}
@@ -257,9 +278,11 @@
       </div>
       <div class="scrollcue"><span data-i18n="scroll"></span><i></i></div>
     </div>
-    <div class="hero-media media">
+    <div class="hero-media">
       <span class="vline"></span>
-      <div class="kb"><img data-parallax="0.10" src="./images/hero-skyline.jpg" alt=""></div>
+      <div class="art float">
+        <img class="ink ink-down" src="./images/passport.png" alt="Passaporte americano">
+      </div>
       <div class="hero-badge"><span class="d"></span><span>Boca Raton · Florida</span></div>
     </div>
   </section>
@@ -290,6 +313,29 @@
     </div>
   </section>
 
+  <!-- OTHER AREAS (dedicated, navy-d) -->
+  <section class="navy-d pad" id="outras">
+    <div class="wrap">
+      <div class="rv" style="max-width:760px;margin-bottom:50px">
+        <span class="eyebrow" style="color:var(--gold-2)" data-i18n="ot_eyebrow"></span>
+        <h2 class="t" style="color:#fff"><span data-i18n="oa_titlea"></span> <em data-i18n="oa_titleb"></em></h2>
+        <p class="lead2" style="color:#b9c7d6" data-i18n="oa_sub"></p>
+      </div>
+      <div class="oa-grid">
+        <div class="oa rv"><h4 data-i18n="oa1t"></h4><p data-i18n="oa1d"></p></div>
+        <div class="oa rv"><h4 data-i18n="oa2t"></h4><p data-i18n="oa2d"></p></div>
+        <div class="oa rv"><h4 data-i18n="oa3t"></h4><p data-i18n="oa3d"></p></div>
+        <div class="oa rv"><h4 data-i18n="oa4t"></h4><p data-i18n="oa4d"></p></div>
+        <div class="oa rv"><h4 data-i18n="oa5t"></h4><p data-i18n="oa5d"></p></div>
+        <div class="oa rv"><h4 data-i18n="oa6t"></h4><p data-i18n="oa6d"></p></div>
+        <div class="oa rv"><h4 data-i18n="oa7t"></h4><p data-i18n="oa7d"></p></div>
+        <div class="oa rv"><h4 data-i18n="oa8t"></h4><p data-i18n="oa8d"></p></div>
+        <div class="oa rv"><h4 data-i18n="oa9t"></h4><p data-i18n="oa9d"></p></div>
+        <div class="oa rv"><h4 data-i18n="oa10t"></h4><p data-i18n="oa10d"></p></div>
+      </div>
+    </div>
+  </section>
+
   <!-- 50 STATES split (navy) -->
   <section class="navy states">
     <div class="states-text">
@@ -297,8 +343,10 @@
       <h2 class="rv d1"><span data-i18n="fed_titlea"></span> <em data-i18n="fed_titleb"></em></h2>
       <p class="rv d2" data-i18n="fed_text"></p>
     </div>
-    <div class="media">
-      <div class="kb"><img data-parallax="0.12" src="./images/arch.jpg" alt=""></div>
+    <div class="media states-map">
+      <div class="art" data-parallax="0.07">
+        <img class="ink ink-right" src="./images/us-map.png" alt="Mapa dos Estados Unidos">
+      </div>
     </div>
   </section>
 
@@ -366,14 +414,6 @@
     </div>
   </section>
 
-  <!-- PHILOSOPHY (navy-d) -->
-  <section class="navy-d pad philo">
-    <div class="wrap rv">
-      <p class="big serif"><span data-i18n="ph_a"></span> <span class="g" data-i18n="ph_b"></span> <span data-i18n="ph_c"></span></p>
-      <div class="sig">— Salvador Law, P.A.</div>
-    </div>
-  </section>
-
   <!-- TRIAGE full-bleed -->
   <section class="triage">
     <div class="media"><div class="kb"><img data-parallax="0.08" src="./images/hero-skyline.jpg" alt=""></div></div>
@@ -392,14 +432,6 @@
         <span class="eyebrow onc" data-i18n="ct_eyebrow"></span>
         <h2 class="t"><span data-i18n="ct_titlea"></span> <em data-i18n="ct_titleb"></em></h2>
       </div>
-      <div style="margin-top:36px">
-        <span class="eyebrow onc" data-i18n="ot_eyebrow"></span>
-        <div class="other-row">
-          <span class="pill" data-i18n="ot1"></span><span class="pill" data-i18n="ot2"></span>
-          <span class="pill" data-i18n="ot3"></span><span class="pill" data-i18n="ot4"></span>
-          <span class="pill" data-i18n="ot5"></span>
-        </div>
-      </div>
       <div class="cgrid">
         <div class="rv">
           <div class="cline"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.1-1.1a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>
@@ -417,7 +449,7 @@
         <div class="cta-card rv d2">
           <h3 data-i18n="cc_title"></h3>
           <p data-i18n="cc_text"></p>
-          <a class="btn btn-solid" href="https://wa.me/15614517099?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Salvador%20Law." target="_blank" rel="noopener"><span data-i18n="cta_book"></span> <span class="ar">→</span></a>
+          <a class="btn btn-solid" href="./triagem.html"><span data-i18n="cta_visa"></span> <span class="ar">→</span></a>
         </div>
       </div>
     </div>
@@ -467,7 +499,7 @@ const T = {
   st_states:{pt:'Estados atendidos',en:'States served',es:'Estados atendidos'},
   st_awards:{pt:'Prêmios & reconhecimentos',en:'Awards & recognitions',es:'Premios y reconocimientos'},
 
-  visa_eyebrow:{pt:'Áreas de atuação premium',en:'Premium practice areas',es:'Áreas de práctica premium'},
+  visa_eyebrow:{pt:'Principais áreas de atuação',en:'Main practice areas',es:'Principales áreas de práctica'},
   visa_titlea:{pt:'Para quem constrói algo',en:'For those building something',es:'Para quienes construyen algo'},
   visa_titleb:{pt:'extraordinário.',en:'extraordinary.',es:'extraordinario.'},
   visa_sub:{pt:'Concentramos nossa expertise nas categorias mais estratégicas de imigração de trabalho e investimento — onde a estratégia jurídica define o resultado.',
@@ -527,9 +559,9 @@ const T = {
   pc4t:{pt:'Acompanhamento',en:'Follow-through',es:'Acompañamiento'},
   pc4d:{pt:'Conduzimos o seu caso até a decisão, com comunicação clara em cada etapa.',en:'We guide your case through to the decision, with clear communication at every step.',es:'Conducimos su caso hasta la decisión, con comunicación clara en cada etapa.'},
 
-  ph_a:{pt:'Tratamos cada caso com a',en:'We treat every case with the',es:'Tratamos cada caso con la'},
-  ph_b:{pt:'estratégia, o rigor e a discrição',en:'strategy, rigor and discretion',es:'estrategia, el rigor y la discreción'},
-  ph_c:{pt:'que histórias extraordinárias merecem.',en:'that extraordinary stories deserve.',es:'que las historias extraordinarias merecen.'},
+  ph_a:{pt:'',en:'',es:''},
+  ph_b:{pt:'',en:'',es:''},
+  ph_c:{pt:'',en:'',es:''},
 
   tg_badge:{pt:'Avaliação inicial · gratuita',en:'Free initial assessment',es:'Evaluación inicial · gratuita'},
   tg_titlea:{pt:'Descubra para qual visto você tem',en:'Find out which visa you may',es:'Descubra para qué visa tiene'},
@@ -539,11 +571,31 @@ const T = {
            es:'Responda algunas preguntas y reciba una indicación de los caminos más probables para su perfil. Al final, agende una consulta y obtenga una condición especial.'},
 
   ot_eyebrow:{pt:'Outras áreas de atuação',en:'Other practice areas',es:'Otras áreas de práctica'},
-  ot1:{pt:'Visto K-1 (noivo/noiva)',en:'K-1 (fiancé) visa',es:'Visa K-1 (prometido/a)'},
-  ot2:{pt:'Green card por casamento',en:'Marriage green card',es:'Green card por matrimonio'},
-  ot3:{pt:'Asilo',en:'Asylum',es:'Asilo'},
-  ot4:{pt:'VAWA',en:'VAWA',es:'VAWA'},
-  ot5:{pt:'Cidadania & naturalização',en:'Citizenship & naturalization',es:'Ciudadanía y naturalización'},
+  oa_titlea:{pt:'Atendemos',en:'We handle',es:'Atendemos'},
+  oa_titleb:{pt:'todos os casos de imigração.',en:'every immigration case.',es:'todos los casos de inmigración.'},
+  oa_sub:{pt:'Além das categorias premium, conduzimos toda a gama de processos de imigração — familiares, humanitários e de cidadania.',
+          en:'Beyond the premium categories, we handle the full range of immigration matters — family, humanitarian and citizenship.',
+          es:'Además de las categorías premium, conducimos toda la gama de procesos migratorios — familiares, humanitarios y de ciudadanía.'},
+  oa1t:{pt:'Visto K-1',en:'K-1 visa',es:'Visa K-1'},
+  oa1d:{pt:'Noivo(a) de cidadão americano.',en:'Fiancé(e) of a U.S. citizen.',es:'Prometido(a) de ciudadano americano.'},
+  oa2t:{pt:'Green card familiar',en:'Family green card',es:'Green card familiar'},
+  oa2d:{pt:'Cônjuges, pais, filhos e irmãos.',en:'Spouses, parents, children and siblings.',es:'Cónyuges, padres, hijos y hermanos.'},
+  oa3t:{pt:'Ajuste de status (AOS)',en:'Adjustment of status (AOS)',es:'Ajuste de estatus (AOS)'},
+  oa3d:{pt:'Obtenção do green card dentro dos EUA.',en:'Obtaining the green card from within the U.S.',es:'Obtención de la green card dentro de EE. UU.'},
+  oa4t:{pt:'Asilo',en:'Asylum',es:'Asilo'},
+  oa4d:{pt:'Proteção a quem sofre perseguição.',en:'Protection for those facing persecution.',es:'Protección para quienes sufren persecución.'},
+  oa5t:{pt:'VAWA',en:'VAWA',es:'VAWA'},
+  oa5d:{pt:'Vítimas de violência doméstica.',en:'Victims of domestic violence.',es:'Víctimas de violencia doméstica.'},
+  oa6t:{pt:'Visto U',en:'U visa',es:'Visa U'},
+  oa6d:{pt:'Vítimas de crimes nos Estados Unidos.',en:'Victims of crimes in the United States.',es:'Víctimas de delitos en EE. UU.'},
+  oa7t:{pt:'SIJS',en:'SIJS',es:'SIJS'},
+  oa7d:{pt:'Menores sob proteção judicial.',en:'Minors under court protection.',es:'Menores bajo protección judicial.'},
+  oa8t:{pt:'TPS',en:'TPS',es:'TPS'},
+  oa8d:{pt:'Status de Proteção Temporária.',en:'Temporary Protected Status.',es:'Estatus de Protección Temporal.'},
+  oa9t:{pt:'Naturalização',en:'Naturalization',es:'Naturalización'},
+  oa9d:{pt:'Conquista da cidadania americana.',en:'Becoming a U.S. citizen.',es:'Obtención de la ciudadanía americana.'},
+  oa10t:{pt:'Defesa contra deportação',en:'Deportation defense',es:'Defensa contra deportación'},
+  oa10d:{pt:'Representação em corte de imigração.',en:'Representation in immigration court.',es:'Representación en corte de inmigración.'},
 
   ct_eyebrow:{pt:'Fale conosco',en:'Get in touch',es:'Hable con nosotros'},
   ct_titlea:{pt:'Vamos conversar sobre',en:'Let’s talk about',es:'Hablemos sobre'},
@@ -551,10 +603,10 @@ const T = {
   ct_phone:{pt:'Telefone & WhatsApp',en:'Phone & WhatsApp',es:'Teléfono & WhatsApp'},
   ct_email:{pt:'E-mail',en:'Email',es:'Correo'},
   ct_addr:{pt:'Endereço',en:'Address',es:'Dirección'},
-  cc_title:{pt:'O primeiro passo é uma conversa.',en:'The first step is a conversation.',es:'El primer paso es una conversación.'},
-  cc_text:{pt:'Conte-nos sobre o seu objetivo nos Estados Unidos. Nossa equipe responde com agilidade e total confidencialidade.',
-           en:'Tell us about your goal in the United States. Our team responds promptly and with full confidentiality.',
-           es:'Cuéntenos su objetivo en los Estados Unidos. Nuestro equipo responde con agilidad y total confidencialidad.'},
+  cc_title:{pt:'O primeiro passo é o questionário.',en:'The first step is the questionnaire.',es:'El primer paso es el cuestionario.'},
+  cc_text:{pt:'Após preencher o questionário, você já saberá em quais tipos de caso tem maior probabilidade de qualificação — e nossa equipe entra em contato para agendar a sua consulta.',
+           en:'After completing the questionnaire, you’ll already know which case types you’re most likely to qualify for — and our team will reach out to schedule your consultation.',
+           es:'Tras completar el cuestionario, ya sabrá en qué tipos de caso tiene mayor probabilidad de calificar — y nuestro equipo se pondrá en contacto para agendar su consulta.'},
 
   foot_copy:{pt:'© 2026 Salvador Law, P.A. — Immigration Law Practice',en:'© 2026 Salvador Law, P.A. — Immigration Law Practice',es:'© 2026 Salvador Law, P.A. — Immigration Law Practice'},
   foot_disc:{pt:'Este site tem caráter informativo e não constitui aconselhamento jurídico. O contato inicial não cria relação advogado-cliente.',
@@ -569,6 +621,8 @@ document.getElementById('track').innerHTML=[...outlets,...outlets].map(o=>`<span
 const hdr=document.getElementById('hdr');addEventListener('scroll',()=>hdr.classList.toggle('sc',scrollY>40),{passive:true});hdr.classList.toggle('sc',scrollY>40);
 const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');en.target.querySelectorAll('[data-count]').forEach(runCount);io.unobserve(en.target);}});},{threshold:.16});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const ioDraw=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('drawn');ioDraw.unobserve(en.target);}});},{threshold:.25});
+document.querySelectorAll('.art').forEach(el=>ioDraw.observe(el));
 function runCount(el){const target=+el.getAttribute('data-count'),suf=el.getAttribute('data-suf')||'',dur=1500,t0=performance.now();(function s(t){const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(target*e)+(p===1?suf:'');if(p<1)requestAnimationFrame(s);})(performance.now());}
 /* parallax */
 const px=[...document.querySelectorAll('[data-parallax]')];
