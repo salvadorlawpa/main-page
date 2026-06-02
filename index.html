@@ -613,13 +613,13 @@ const T = {
            en:'After completing the questionnaire, you’ll already know which case types you’re most likely to qualify for — and our team will reach out to schedule your consultation.',
            es:'Tras completar el cuestionario, ya sabrá en qué tipos de caso tiene mayor probabilidad de calificar — y nuestro equipo se pondrá en contacto para agendar su consulta.'},
 
-  foot_copy:{pt:'© 2026 Salvador Law, P.A. — Immigration Law Practice',en:'© 2026 Salvador Law, P.A. — Immigration Law Practice',es:'© 2026 Salvador Law, P.A. — Immigration Law Practice'},
+  foot_copy:{pt:'© 2019–{Y} Salvador Law, P.A. — Immigration Law Practice',en:'© 2019–{Y} Salvador Law, P.A. — Immigration Law Practice',es:'© 2019–{Y} Salvador Law, P.A. — Immigration Law Practice'},
   foot_disc:{pt:'Este site tem caráter informativo e não constitui aconselhamento jurídico. O contato inicial não cria relação advogado-cliente.',
              en:'This website is for informational purposes only and does not constitute legal advice. Initial contact does not create an attorney-client relationship.',
              es:'Este sitio es solo informativo y no constituye asesoramiento legal. El contacto inicial no crea una relación abogado-cliente.'}
 };
 let lang='pt';
-function apply(){document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(T[k])el.textContent=T[k][lang]||T[k].pt;});}
+function apply(){document.documentElement.lang=lang;const Y=new Date().getFullYear();document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(T[k])el.textContent=(T[k][lang]||T[k].pt).replace('{Y}',Y);});}
 document.getElementById('langs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;lang=b.dataset.l;document.querySelectorAll('#langs button').forEach(x=>x.classList.toggle('on',x===b));apply();});
 const outlets=['Washington Post','Marie Claire','UOL','Terra','CBN','PEGN','Migalhas','Authority Magazine'];
 document.getElementById('track').innerHTML=[...outlets,...outlets].map(o=>`<span>${o}</span>`).join('');
