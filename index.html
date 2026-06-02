@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salvador Law, P.A. — Immigration Law Practice | Boca Raton, FL</title>
+<meta name="description" content="Advocacia de imigração de alto nível nos Estados Unidos. Vistos para talentos, executivos e investidores: EB-2 NIW, EB-1A, O-1, L-1A, E-2 e EB-5. Atendimento nos 50 estados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0b1f37; --navy-d:#071427; --navy-2:#102a47; --navy-3:#17385c;
+    --cream:#f4efe3; --cream-2:#ece4d3; --ink:#142537; --ink-2:#41566c;
+    --gold:#c19a44; --gold-2:#d8b25c; --gold-3:#eccf8b; --gold-onc:#9a7a2c;
+    --serifd:'Cinzel',serif; --serif:'Cormorant Garamond',serif; --sans:'Jost',system-ui,sans-serif;
+    --maxw:1280px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--navy);color:#eef3f9;font-family:var(--sans);font-weight:300;letter-spacing:.2px;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  ::selection{background:var(--gold-2);color:var(--navy-d)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+  @media(max-width:600px){.wrap{padding:0 24px}}
+  .serif{font-family:var(--serif)}
+
+  .eyebrow{font-family:var(--serifd);font-weight:600;font-size:11px;letter-spacing:5px;text-transform:uppercase;display:inline-block}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;padding:16px 32px;cursor:pointer;border:1px solid transparent;transition:.4s;position:relative;overflow:hidden}
+  .btn .ar{transition:.3s}.btn:hover .ar{transform:translateX(5px)}
+  .btn-solid{background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy-d);font-weight:600}
+  .btn-solid:hover{filter:brightness(1.07);transform:translateY(-2px);box-shadow:0 20px 44px -18px rgba(216,178,92,.6)}
+  .btn-line{background:transparent;border-color:currentColor;color:var(--gold-2)}
+  .btn-line:hover{background:var(--gold-2);color:var(--navy-d);border-color:var(--gold-2)}
+  .btn-line.onc{color:var(--gold-onc)}.btn-line.onc:hover{background:var(--gold-onc);color:var(--cream)}
+
+  /* header */
+  header{position:fixed;inset:0 0 auto 0;z-index:60;transition:.45s}
+  header.sc{background:rgba(7,20,39,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(216,178,92,.18)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;transition:.45s}
+  header.sc nav{padding:12px 40px}
+  @media(max-width:600px){nav{padding:16px 24px}}
+  .brand img{height:52px;width:auto;transition:.45s;filter:drop-shadow(0 4px 14px rgba(0,0,0,.5))}
+  header.sc .brand img{height:42px}
+  .navlinks{display:flex;gap:32px;align-items:center}
+  .navlinks a{font-size:12px;letter-spacing:1.5px;color:#e4ebf3;text-transform:uppercase;position:relative;padding:6px 0;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+  .navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold-2);transition:.3s}
+  .navlinks a:hover::after{width:100%}
+  .navright{display:flex;align-items:center;gap:18px}
+  .langs{display:flex;border:1px solid rgba(216,178,92,.4)}
+  .langs button{border:0;background:transparent;color:#e4ebf3;font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:1px;padding:8px 11px;cursor:pointer;transition:.25s}
+  .langs button.on{background:var(--gold-2);color:var(--navy-d)}
+  @media(max-width:1080px){.navlinks{display:none}}
+
+  /* reveal + motion */
+  .rv{opacity:0;transform:translateY(38px);transition:opacity 1.1s cubic-bezier(.16,1,.3,1),transform 1.1s cubic-bezier(.16,1,.3,1)}
+  .rv.in{opacity:1;transform:none}
+  .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
+  .clip{overflow:hidden;display:block}
+  .clip>span{display:block;transform:translateY(108%);transition:transform 1.1s cubic-bezier(.16,1,.3,1)}
+  .in .clip>span,.hero .clip>span{transform:translateY(0)}
+
+  .media{position:relative;overflow:hidden}
+  .media .kb{position:absolute;inset:-8% 0;animation:kb 20s ease-in-out infinite alternate}
+  .media img{width:100%;height:100%;object-fit:cover;will-change:transform}
+  @keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.18)}}
+  .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,20,39,.25),rgba(7,20,39,.55))}
+
+  /* HERO split */
+  .hero{min-height:100vh;display:grid;grid-template-columns:1.05fr 1fr;position:relative}
+  .hero-text{display:flex;flex-direction:column;justify-content:center;padding:150px 6vw 90px;position:relative;background:linear-gradient(135deg,var(--navy),var(--navy-d))}
+  .hero-text .eyebrow{color:var(--gold-2);opacity:0;animation:fade 1s .2s forwards}
+  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,5.2vw,84px);line-height:1;letter-spacing:-1px;color:#fff;margin:22px 0 0}
+  .hero h1 em{font-style:italic;color:var(--gold-2)}
+  .hero .lead{font-size:clamp(15px,1.3vw,18px);line-height:1.75;color:#c6d2e0;max-width:46ch;margin:28px 0 0;opacity:0;animation:fade 1.1s .9s forwards}
+  .hero .acts{display:flex;gap:14px;flex-wrap:wrap;margin-top:36px;opacity:0;animation:fade 1.1s 1.1s forwards}
+  .hero-media{position:relative}
+  .hero-media .vline{position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--gold-2),transparent);z-index:3}
+  .hero-badge{position:absolute;left:34px;bottom:34px;z-index:3;font-family:var(--serifd);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#e7d9b6;display:flex;align-items:center;gap:12px}
+  .hero-badge .d{width:30px;height:1px;background:var(--gold-2)}
+  .scrollcue{position:absolute;left:6vw;bottom:34px;z-index:4;display:flex;align-items:center;gap:12px;font-family:var(--serifd);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8fa1b6;opacity:0;animation:fade 1s 1.4s forwards}
+  .scrollcue i{width:46px;height:1px;background:linear-gradient(90deg,var(--gold-2),transparent);transform-origin:left;animation:cue 2.2s ease-in-out infinite}
+  @keyframes cue{0%,100%{transform:scaleX(.4);opacity:.4}50%{transform:scaleX(1);opacity:1}}
+  @keyframes fade{to{opacity:1}}
+  @media(max-width:860px){
+    .hero{grid-template-columns:1fr}
+    .hero-media{position:absolute;inset:0;z-index:0}
+    .hero-media::before{content:"";position:absolute;inset:0;background:rgba(7,20,39,.62);z-index:2}
+    .hero-text{position:relative;z-index:3;background:none;padding:150px 24px 110px;min-height:100vh}
+    .hero-media .vline,.scrollcue{display:none}
+  }
+
+  /* generic sections */
+  section{position:relative}
+  .navy{background:var(--navy);color:#eef3f9}
+  .navy-d{background:var(--navy-d);color:#eef3f9}
+  .cream{background:var(--cream);color:var(--ink)}
+  .pad{padding:120px 0}
+  @media(max-width:600px){.pad{padding:80px 0}}
+  .eyebrow.onc{color:var(--gold-onc)}
+  h2.t{font-family:var(--serif);font-weight:500;font-size:clamp(34px,4.6vw,62px);line-height:1.04;margin:16px 0 0}
+  h2.t em{font-style:italic;color:var(--gold-2)}
+  .cream h2.t em{color:var(--gold-onc)}
+  .lead2{font-size:17px;line-height:1.75;margin:20px 0 0}
+  .navy .lead2,.navy-d .lead2{color:#b9c7d6}.cream .lead2{color:var(--ink-2)}
+
+  /* VISAS editorial rows (asymmetric) */
+  .visa-grid{display:grid;grid-template-columns:.85fr 1.4fr;gap:60px;align-items:start}
+  @media(max-width:880px){.visa-grid{grid-template-columns:1fr;gap:30px}}
+  .visa-intro{position:sticky;top:120px}
+  @media(max-width:880px){.visa-intro{position:static}}
+  .vrow{display:grid;grid-template-columns:auto 1fr;gap:26px;padding:28px 0;border-top:1px solid rgba(20,37,55,.16);cursor:default;transition:.35s}
+  .vrow:last-child{border-bottom:1px solid rgba(20,37,55,.16)}
+  .vrow .code{font-family:var(--serifd);font-weight:700;font-size:13px;letter-spacing:1px;color:var(--gold-onc);padding-top:6px;white-space:nowrap}
+  .vrow h3{font-family:var(--serif);font-weight:600;font-size:30px;color:var(--ink);margin:0;line-height:1.1;transition:.3s}
+  .vrow p{color:var(--ink-2);font-size:15px;line-height:1.6;margin:8px 0 0;max-width:60ch}
+  .vrow .who{font-size:12px;letter-spacing:.4px;color:var(--gold-onc);margin-top:10px}
+  .vrow:hover{padding-left:14px}
+  .vrow:hover h3{color:var(--gold-onc)}
+
+  /* 50 states split */
+  .states{display:grid;grid-template-columns:1fr 1fr;min-height:88vh}
+  @media(max-width:860px){.states{grid-template-columns:1fr}.states .media{min-height:50vh;order:-1}}
+  .states-text{display:flex;flex-direction:column;justify-content:center;padding:100px 6vw}
+  .states .huge{font-family:var(--serif);font-weight:600;font-size:clamp(120px,18vw,260px);line-height:.8;color:transparent;-webkit-text-stroke:1.4px rgba(216,178,92,.55);margin:0 0 6px}
+  .states h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.4vw,46px);color:#fff;line-height:1.1;margin:0}
+  .states h2 em{font-style:italic;color:var(--gold-2)}
+  .states p{color:#b9c7d6;font-size:16px;line-height:1.75;margin:18px 0 0;max-width:48ch}
+
+  /* Larissa split */
+  .lar{display:grid;grid-template-columns:1fr 1.1fr;min-height:90vh;align-items:stretch}
+  @media(max-width:880px){.lar{grid-template-columns:1fr}.lar .media{min-height:60vh}}
+  .lar .media{position:relative}
+  .lar .nameplate{position:absolute;left:0;bottom:42px;background:linear-gradient(120deg,var(--gold),var(--gold-2));color:var(--navy-d);font-family:var(--serifd);font-size:12px;letter-spacing:2px;padding:12px 22px;z-index:3}
+  .lar-text{display:flex;flex-direction:column;justify-content:center;padding:100px 6vw}
+  .lar .role{font-family:var(--serifd);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-onc);margin-top:8px}
+  .lar p{color:var(--ink-2);font-size:16px;line-height:1.8;margin:18px 0 0}
+  .creds{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+  .cred{font-size:11.5px;letter-spacing:.4px;color:var(--gold-onc);border:1px solid rgba(154,122,44,.4);padding:7px 13px}
+
+  /* press marquee */
+  .press{overflow:hidden;padding:40px 0;border-top:1px solid rgba(216,178,92,.16);border-bottom:1px solid rgba(216,178,92,.16)}
+  .press .lbl{text-align:center;font-family:var(--serifd);font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#8fa1b6;margin-bottom:22px}
+  .track{display:flex;gap:64px;white-space:nowrap;animation:scroll 32s linear infinite;width:max-content}
+  .track span{font-family:var(--serif);font-style:italic;font-size:26px;color:#c3d0de;opacity:.8}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr)}
+  @media(max-width:760px){.stats{grid-template-columns:1fr}}
+  .stat{text-align:center;padding:56px 20px;border-right:1px solid rgba(216,178,92,.16)}
+  .stat:last-child{border-right:0}
+  @media(max-width:760px){.stat{border-right:0;border-bottom:1px solid rgba(216,178,92,.16);padding:40px 20px}}
+  .stat .n{font-family:var(--serif);font-weight:600;font-size:clamp(54px,7vw,86px);line-height:1;color:var(--gold-2)}
+  .stat .lb{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#b9c7d6;margin-top:12px}
+
+  /* process asymmetric */
+  .proc-grid{display:grid;grid-template-columns:.8fr 1.5fr;gap:50px}
+  @media(max-width:880px){.proc-grid{grid-template-columns:1fr;gap:30px}}
+  .pstep{display:grid;grid-template-columns:auto 1fr;gap:24px;padding:26px 0;border-top:1px solid rgba(20,37,55,.16)}
+  .pstep .num{font-family:var(--serif);font-style:italic;font-size:38px;color:var(--gold-onc);line-height:1}
+  .pstep h4{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--ink);margin:0}
+  .pstep p{color:var(--ink-2);font-size:15px;line-height:1.6;margin:8px 0 0}
+
+  /* awards */
+  .agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(216,178,92,.18);border:1px solid rgba(216,178,92,.18);margin-top:46px}
+  @media(max-width:820px){.agrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.agrid{grid-template-columns:1fr}}
+  .award{background:var(--navy);padding:28px 26px}
+  .award .yr{font-family:var(--serifd);font-size:11px;letter-spacing:2px;color:var(--gold-2)}
+  .award .ti{font-family:var(--serif);font-size:20px;color:#fff;margin-top:6px;line-height:1.2}
+  .award .by{font-size:12.5px;color:#8fa1b6;margin-top:5px}
+
+  /* philosophy */
+  .philo{text-align:center}
+  .philo .big{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(30px,4.6vw,56px);line-height:1.22;max-width:20ch;margin:0 auto}
+  .philo .big .g{font-style:normal;color:var(--gold-2)}
+  .philo .sig{margin-top:30px;font-family:var(--serifd);letter-spacing:3px;font-size:12px;color:var(--gold-2)}
+
+  /* triage full-bleed */
+  .triage{position:relative;min-height:74vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+  .triage .media{position:absolute;inset:0;z-index:0}
+  .triage .media::after{background:linear-gradient(180deg,rgba(7,20,39,.78),rgba(7,20,39,.86))}
+  .triage-in{position:relative;z-index:2;max-width:760px;padding:80px 30px}
+  .triage .badge{display:inline-block;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-2);border:1px solid rgba(216,178,92,.45);border-radius:30px;padding:9px 19px;margin-bottom:24px}
+  .triage h2{font-family:var(--serif);font-weight:500;font-size:clamp(32px,4.8vw,58px);color:#fff;line-height:1.08}
+  .triage h2 em{font-style:italic;color:var(--gold-2)}
+  .triage p{color:#c6d2e0;font-size:17px;line-height:1.7;margin:18px auto 34px;max-width:58ch}
+
+  /* other + contact */
+  .other-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+  .pill{border:1px solid rgba(20,37,55,.2);padding:11px 22px;font-size:13.5px;color:var(--ink-2);transition:.3s}
+  .pill:hover{border-color:var(--gold-onc);color:var(--ink)}
+  .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:50px}
+  @media(max-width:820px){.cgrid{grid-template-columns:1fr;gap:34px}}
+  .cline{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-bottom:1px solid rgba(20,37,55,.14)}
+  .cline svg{width:20px;height:20px;stroke:var(--gold-onc);fill:none;stroke-width:1.5;flex:none;margin-top:3px}
+  .cline .k{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-2)}
+  .cline .v{font-size:17px;color:var(--ink);margin-top:4px}
+  .cline .v a:hover{color:var(--gold-onc)}
+  .socials{display:flex;gap:12px;margin-top:24px}
+  .socials a{width:44px;height:44px;border:1px solid rgba(20,37,55,.2);border-radius:50%;display:grid;place-items:center;transition:.3s}
+  .socials a:hover{border-color:var(--gold-onc);background:rgba(154,122,44,.1)}
+  .socials svg{width:18px;height:18px;fill:var(--ink)}.socials a:hover svg{fill:var(--gold-onc)}
+  .cta-card{border:1px solid rgba(154,122,44,.3);padding:46px 42px;background:linear-gradient(160deg,#fff,transparent)}
+  .cta-card h3{font-family:var(--serif);font-weight:500;font-size:30px;color:var(--ink);line-height:1.15}
+  .cta-card p{color:var(--ink-2);margin:14px 0 28px;line-height:1.6}
+
+  footer{background:var(--navy-d);padding:48px 0 42px;border-top:1px solid rgba(216,178,92,.16)}
+  .frow{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+  .frow img{height:54px}
+  .fnav{display:flex;gap:24px;flex-wrap:wrap}
+  .fnav a{font-size:12px;letter-spacing:.5px;color:#b9c7d6;text-transform:uppercase}.fnav a:hover{color:var(--gold-2)}
+  .disc{margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);font-size:11.5px;color:#6f8197;line-height:1.7;max-width:94ch}
+
+  .wa{position:fixed;right:24px;bottom:24px;z-index:70;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 34px -10px rgba(37,211,102,.6);transition:.3s}
+  .wa:hover{transform:scale(1.08)}.wa svg{width:30px;height:30px;fill:#fff}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <nav>
+    <a class="brand" href="#top"><img src="./images/logo-light.png" alt="Salvador Law, P.A."></a>
+    <div class="navlinks">
+      <a href="#vistos" data-i18n="nav_visas"></a>
+      <a href="#larissa" data-i18n="nav_about"></a>
+      <a href="#reconhecimento" data-i18n="nav_rec"></a>
+      <a href="#contato" data-i18n="nav_contact"></a>
+    </div>
+    <div class="navright">
+      <div class="langs" id="langs">
+        <button data-l="pt" class="on">PT</button>
+        <button data-l="en">EN</button>
+        <button data-l="es">ES</button>
+      </div>
+      <a class="btn btn-line" href="./triagem.html" data-i18n="cta_visa"></a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- HERO SPLIT -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="eyebrow" data-i18n="hero_eyebrow"></span>
+      <h1>
+        <span class="clip"><span data-i18n="hero_h1a"></span></span>
+        <span class="clip"><span data-i18n="hero_h1b"></span></span>
+        <span class="clip"><span><em data-i18n="hero_h1c"></em></span></span>
+      </h1>
+      <p class="lead" data-i18n="hero_lead"></p>
+      <div class="acts">
+        <a class="btn btn-solid" href="./triagem.html"><span data-i18n="cta_visa"></span> <span class="ar">→</span></a>
+        <a class="btn btn-line" href="#contato" data-i18n="cta_book"></a>
+      </div>
+      <div class="scrollcue"><span data-i18n="scroll"></span><i></i></div>
+    </div>
+    <div class="hero-media media">
+      <span class="vline"></span>
+      <div class="kb"><img data-parallax="0.10" src="./images/hero-skyline.jpg" alt=""></div>
+      <div class="hero-badge"><span class="d"></span><span>Boca Raton · Florida</span></div>
+    </div>
+  </section>
+
+  <!-- PRESS -->
+  <section class="navy-d press" id="reconhecimento">
+    <div class="lbl" data-i18n="auth_lbl"></div>
+    <div class="track" id="track"></div>
+  </section>
+
+  <!-- VISAS (cream, editorial rows) -->
+  <section class="cream pad" id="vistos">
+    <div class="wrap visa-grid">
+      <div class="visa-intro rv">
+        <span class="eyebrow onc" data-i18n="visa_eyebrow"></span>
+        <h2 class="t"><span data-i18n="visa_titlea"></span> <em data-i18n="visa_titleb"></em></h2>
+        <p class="lead2" data-i18n="visa_sub"></p>
+        <a class="btn btn-line onc" href="./triagem.html" style="margin-top:30px"><span data-i18n="cta_visa"></span> <span class="ar">→</span></a>
+      </div>
+      <div>
+        <div class="vrow rv"><div class="code">EB-2 NIW</div><div><h3 data-i18n="v1t"></h3><p data-i18n="v1d"></p><div class="who" data-i18n="v1w"></div></div></div>
+        <div class="vrow rv"><div class="code">EB-1A</div><div><h3 data-i18n="v2t"></h3><p data-i18n="v2d"></p><div class="who" data-i18n="v2w"></div></div></div>
+        <div class="vrow rv"><div class="code">O-1</div><div><h3 data-i18n="v3t"></h3><p data-i18n="v3d"></p><div class="who" data-i18n="v3w"></div></div></div>
+        <div class="vrow rv"><div class="code">L-1A</div><div><h3 data-i18n="v4t"></h3><p data-i18n="v4d"></p><div class="who" data-i18n="v4w"></div></div></div>
+        <div class="vrow rv"><div class="code">E-2</div><div><h3 data-i18n="v5t"></h3><p data-i18n="v5d"></p><div class="who" data-i18n="v5w"></div></div></div>
+        <div class="vrow rv"><div class="code">EB-5</div><div><h3 data-i18n="v6t"></h3><p data-i18n="v6d"></p><div class="who" data-i18n="v6w"></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 50 STATES split (navy) -->
+  <section class="navy states">
+    <div class="states-text">
+      <div class="huge rv">50</div>
+      <h2 class="rv d1"><span data-i18n="fed_titlea"></span> <em data-i18n="fed_titleb"></em></h2>
+      <p class="rv d2" data-i18n="fed_text"></p>
+    </div>
+    <div class="media">
+      <div class="kb"><img data-parallax="0.12" src="./images/arch.jpg" alt=""></div>
+    </div>
+  </section>
+
+  <!-- STATS (navy-d) -->
+  <section class="navy-d">
+    <div class="stats">
+      <div class="stat rv"><div class="n" data-count="10" data-suf="+">0</div><div class="lb" data-i18n="st_years"></div></div>
+      <div class="stat rv d1"><div class="n" data-count="50">0</div><div class="lb" data-i18n="st_states"></div></div>
+      <div class="stat rv d2"><div class="n" data-count="15" data-suf="+">0</div><div class="lb" data-i18n="st_awards"></div></div>
+    </div>
+  </section>
+
+  <!-- LARISSA split (cream) -->
+  <section class="cream lar" id="larissa">
+    <div class="media">
+      <div class="kb"><img data-parallax="0.10" src="./images/larissa.png" alt="Dra. Larissa Salvador"></div>
+      <div class="nameplate">Dra. Larissa Salvador</div>
+    </div>
+    <div class="lar-text">
+      <span class="eyebrow onc rv" data-i18n="ab_eyebrow"></span>
+      <h2 class="t rv d1" style="color:var(--ink)" data-i18n="ab_role"></h2>
+      <p class="rv d2" data-i18n="ab_p1"></p>
+      <p class="rv d3" data-i18n="ab_p2"></p>
+      <div class="creds rv d4">
+        <span class="cred">AILA Member</span>
+        <span class="cred">Washington Post · 2025</span>
+        <span class="cred">Top 40 Under 40 · 2021–2026</span>
+        <span class="cred">Marie Claire</span>
+        <span class="cred">Elite Lawyer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS (navy) -->
+  <section class="navy pad">
+    <div class="wrap">
+      <div class="rv" style="text-align:center;max-width:680px;margin:0 auto">
+        <span class="eyebrow" style="color:var(--gold-2)" data-i18n="aw_eyebrow"></span>
+        <h2 class="t" style="color:#fff" data-i18n="aw_title"></h2>
+      </div>
+      <div class="agrid rv">
+        <div class="award"><div class="yr">2021–2026</div><div class="ti">Top 40 Under 40</div><div class="by">The National Black Lawyers</div></div>
+        <div class="award"><div class="yr">2025</div><div class="ti" data-i18n="aw_wp"></div><div class="by">The Washington Post</div></div>
+        <div class="award"><div class="yr">2024–2026</div><div class="ti" data-i18n="aw_lod"></div><div class="by">Lawyers of Distinction</div></div>
+        <div class="award"><div class="yr">2024 · 2026</div><div class="ti" data-i18n="aw_el"></div><div class="by">Elite Lawyer</div></div>
+        <div class="award"><div class="yr">2025</div><div class="ti" data-i18n="aw_bb"></div><div class="by">Best of the Best Attorneys · FL</div></div>
+        <div class="award"><div class="yr">2024</div><div class="ti" data-i18n="aw_cl"></div><div class="by">Clutch</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS (cream, asymmetric) -->
+  <section class="cream pad">
+    <div class="wrap proc-grid">
+      <div class="rv">
+        <span class="eyebrow onc" data-i18n="pc_eyebrow"></span>
+        <h2 class="t"><span data-i18n="pc_titlea"></span> <em data-i18n="pc_titleb"></em></h2>
+      </div>
+      <div>
+        <div class="pstep rv"><div class="num">01</div><div><h4 data-i18n="pc1t"></h4><p data-i18n="pc1d"></p></div></div>
+        <div class="pstep rv"><div class="num">02</div><div><h4 data-i18n="pc2t"></h4><p data-i18n="pc2d"></p></div></div>
+        <div class="pstep rv"><div class="num">03</div><div><h4 data-i18n="pc3t"></h4><p data-i18n="pc3d"></p></div></div>
+        <div class="pstep rv"><div class="num">04</div><div><h4 data-i18n="pc4t"></h4><p data-i18n="pc4d"></p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY (navy-d) -->
+  <section class="navy-d pad philo">
+    <div class="wrap rv">
+      <p class="big serif"><span data-i18n="ph_a"></span> <span class="g" data-i18n="ph_b"></span> <span data-i18n="ph_c"></span></p>
+      <div class="sig">— Salvador Law, P.A.</div>
+    </div>
+  </section>
+
+  <!-- TRIAGE full-bleed -->
+  <section class="triage">
+    <div class="media"><div class="kb"><img data-parallax="0.08" src="./images/hero-skyline.jpg" alt=""></div></div>
+    <div class="triage-in rv">
+      <span class="badge" data-i18n="tg_badge"></span>
+      <h2><span data-i18n="tg_titlea"></span> <em data-i18n="tg_titleb"></em></h2>
+      <p data-i18n="tg_text"></p>
+      <a class="btn btn-solid" href="./triagem.html"><span data-i18n="cta_visa"></span> <span class="ar">→</span></a>
+    </div>
+  </section>
+
+  <!-- CONTACT (cream) -->
+  <section class="cream pad" id="contato">
+    <div class="wrap">
+      <div class="rv" style="max-width:680px">
+        <span class="eyebrow onc" data-i18n="ct_eyebrow"></span>
+        <h2 class="t"><span data-i18n="ct_titlea"></span> <em data-i18n="ct_titleb"></em></h2>
+      </div>
+      <div style="margin-top:36px">
+        <span class="eyebrow onc" data-i18n="ot_eyebrow"></span>
+        <div class="other-row">
+          <span class="pill" data-i18n="ot1"></span><span class="pill" data-i18n="ot2"></span>
+          <span class="pill" data-i18n="ot3"></span><span class="pill" data-i18n="ot4"></span>
+          <span class="pill" data-i18n="ot5"></span>
+        </div>
+      </div>
+      <div class="cgrid">
+        <div class="rv">
+          <div class="cline"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.1-1.1a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>
+            <div><div class="k" data-i18n="ct_phone"></div><div class="v"><a href="tel:+15614517099">+1 (561) 451-7099</a></div></div></div>
+          <div class="cline"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <div><div class="k" data-i18n="ct_email"></div><div class="v"><a href="mailto:info@salvadorlawpa.com">info@salvadorlawpa.com</a></div></div></div>
+          <div class="cline"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><div class="k" data-i18n="ct_addr"></div><div class="v">2000 N Dixie Hwy, Suite 202 · Boca Raton, FL 33431</div></div></div>
+          <div class="socials">
+            <a href="https://www.instagram.com/salvadorlawpa/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4a3.8 3.8 0 01-1.4-.9 3.8 3.8 0 01-.9-1.4c-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.4A6.4 6.4 0 1018.4 12 6.4 6.4 0 0012 5.6zm0 10.5A4.1 4.1 0 1116.1 12 4.1 4.1 0 0112 16.1zm6.6-10.9a1.5 1.5 0 11-1.5-1.5 1.5 1.5 0 011.5 1.5z"/></svg></a>
+            <a href="https://www.facebook.com/salvadorlawpa" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 13.5h2.5l.5-3H14V8.5c0-.9.3-1.5 1.6-1.5H17V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.3-3.7 3.9v2.4H8.5v3H11V21h3z"/></svg></a>
+            <a href="https://www.youtube.com/@canaldoimigranteusa2585" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 12s0-3.2-.4-4.7c-.2-.8-.9-1.5-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4c-.8.2-1.5.9-1.7 1.7C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.8.9 1.5 1.7 1.7 1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4c.8-.2 1.5-.9 1.7-1.7.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l6 3.3z"/></svg></a>
+          </div>
+        </div>
+        <div class="cta-card rv d2">
+          <h3 data-i18n="cc_title"></h3>
+          <p data-i18n="cc_text"></p>
+          <a class="btn btn-solid" href="https://wa.me/15614517099?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Salvador%20Law." target="_blank" rel="noopener"><span data-i18n="cta_book"></span> <span class="ar">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="frow">
+      <img src="./images/logo-light.png" alt="Salvador Law, P.A.">
+      <div class="fnav">
+        <a href="#vistos" data-i18n="nav_visas"></a>
+        <a href="#larissa" data-i18n="nav_about"></a>
+        <a href="#contato" data-i18n="nav_contact"></a>
+        <a href="./triagem.html" data-i18n="cta_visa"></a>
+      </div>
+    </div>
+    <div class="disc"><span data-i18n="foot_copy"></span> · <span data-i18n="foot_disc"></span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/15614517099?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Salvador%20Law." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M.5 23.5l1.6-6A11.4 11.4 0 1112 23.4a11.3 11.3 0 01-5.5-1.4L.5 23.5zM6.8 20l.4.2a9.5 9.5 0 105.3-17.6 9.5 9.5 0 00-8 14.6l.2.4-1 3.6 3.1-1.2zM17.5 14.4c-.1-.2-.5-.3-1-.6s-1.4-.7-1.6-.8-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a7.8 7.8 0 01-2.3-1.4 8.6 8.6 0 01-1.6-2c-.2-.3 0-.4.1-.5l.4-.5.3-.4v-.4l-.8-1.8c-.2-.5-.4-.4-.5-.5h-.5a.9.9 0 00-.7.3 2.8 2.8 0 00-.9 2.1c0 1.2.9 2.4 1 2.6s1.7 2.7 4.2 3.8a14 14 0 001.4.5 3.4 3.4 0 001.5.1c.5-.1 1.4-.6 1.6-1.1s.2-1 .2-1.1z"/></svg>
+</a>
+
+<script>
+const T = {
+  cta_visa:{pt:'Descobrir meu visto',en:'Find my visa',es:'Descubrir mi visa'},
+  cta_book:{pt:'Agendar consulta',en:'Book a consultation',es:'Agendar consulta'},
+  scroll:{pt:'Role para descobrir',en:'Scroll to explore',es:'Desliza para explorar'},
+  nav_visas:{pt:'Vistos',en:'Visas',es:'Visas'},
+  nav_about:{pt:'A Dra. Larissa',en:'Dr. Larissa',es:'Dra. Larissa'},
+  nav_rec:{pt:'Reconhecimento',en:'Recognition',es:'Reconocimiento'},
+  nav_contact:{pt:'Contato',en:'Contact',es:'Contacto'},
+
+  hero_eyebrow:{pt:'Advocacia de Imigração · Estados Unidos',en:'Immigration Law · United States',es:'Derecho Migratorio · Estados Unidos'},
+  hero_h1a:{pt:'Seu futuro nos',en:'Your future in',es:'Su futuro en los'},
+  hero_h1b:{pt:'Estados Unidos',en:'the United States',es:'Estados Unidos'},
+  hero_h1c:{pt:'começa aqui.',en:'begins here.',es:'comienza aquí.'},
+  hero_lead:{pt:'Representamos talentos, executivos e investidores na conquista do visto americano — com estratégia jurídica de alto nível, conduzida por uma equipe premiada e reconhecida internacionalmente.',
+             en:'We represent talents, executives and investors in securing the U.S. visa — with high-level legal strategy led by an award-winning, internationally recognized team.',
+             es:'Representamos a talentos, ejecutivos e inversionistas para obtener la visa americana — con estrategia jurídica de alto nivel, conducida por un equipo premiado y reconocido internacionalmente.'},
+
+  auth_lbl:{pt:'Reconhecida por',en:'As featured in',es:'Reconocida por'},
+
+  st_years:{pt:'Anos de atuação',en:'Years of practice',es:'Años de práctica'},
+  st_states:{pt:'Estados atendidos',en:'States served',es:'Estados atendidos'},
+  st_awards:{pt:'Prêmios & reconhecimentos',en:'Awards & recognitions',es:'Premios y reconocimientos'},
+
+  visa_eyebrow:{pt:'Áreas de atuação premium',en:'Premium practice areas',es:'Áreas de práctica premium'},
+  visa_titlea:{pt:'Para quem constrói algo',en:'For those building something',es:'Para quienes construyen algo'},
+  visa_titleb:{pt:'extraordinário.',en:'extraordinary.',es:'extraordinario.'},
+  visa_sub:{pt:'Concentramos nossa expertise nas categorias mais estratégicas de imigração de trabalho e investimento — onde a estratégia jurídica define o resultado.',
+            en:'We focus our expertise on the most strategic work and investment categories — where legal strategy defines the outcome.',
+            es:'Concentramos nuestra experiencia en las categorías más estratégicas de trabajo e inversión — donde la estrategia jurídica define el resultado.'},
+  v1t:{pt:'Interesse Nacional',en:'National Interest Waiver',es:'Interés Nacional'},
+  v1d:{pt:'Para profissionais cujo trabalho tem mérito e importância nacional, dispensando oferta de emprego.',en:'For professionals whose work has merit and national importance, waiving the job offer.',es:'Para profesionales cuyo trabajo tiene mérito e importancia nacional, sin oferta de empleo.'},
+  v1w:{pt:'Pesquisadores · empreendedores · profissionais avançados',en:'Researchers · entrepreneurs · advanced professionals',es:'Investigadores · emprendedores · profesionales'},
+  v2t:{pt:'Habilidade Extraordinária',en:'Extraordinary Ability',es:'Habilidad Extraordinaria'},
+  v2d:{pt:'Para quem está no topo da sua área, com reconhecimento nacional ou internacional sustentado.',en:'For those at the top of their field, with sustained national or international acclaim.',es:'Para quienes están en la cima de su campo, con reconocimiento sostenido.'},
+  v2w:{pt:'Ciência · artes · negócios · esporte',en:'Science · arts · business · athletics',es:'Ciencia · artes · negocios · deporte'},
+  v3t:{pt:'Talento de Destaque',en:'Outstanding Talent',es:'Talento Destacado'},
+  v3d:{pt:'Visto de trabalho para indivíduos com habilidade extraordinária reconhecida na sua área.',en:'Work visa for individuals with recognized extraordinary ability in their field.',es:'Visa de trabajo para personas con habilidad extraordinaria reconocida.'},
+  v3w:{pt:'Artistas · atletas · executivos · cientistas',en:'Artists · athletes · executives · scientists',es:'Artistas · atletas · ejecutivos · científicos'},
+  v4t:{pt:'Transferência de Executivos',en:'Executive Transfer',es:'Transferencia de Ejecutivos'},
+  v4d:{pt:'Para executivos e gerentes transferidos de uma empresa no exterior para uma operação nos EUA.',en:'For executives and managers transferred from a company abroad to a U.S. operation.',es:'Para ejecutivos y gerentes transferidos de una empresa en el exterior a EE. UU.'},
+  v4w:{pt:'Executivos · gerentes · multinacionais',en:'Executives · managers · multinationals',es:'Ejecutivos · gerentes · multinacionales'},
+  v5t:{pt:'Investidor de Tratado',en:'Treaty Investor',es:'Inversionista por Tratado'},
+  v5d:{pt:'Para investidores de países com tratado que aportam capital substancial em um negócio nos EUA.',en:'For treaty-country investors making a substantial investment in a U.S. business.',es:'Para inversionistas de países con tratado que invierten en un negocio en EE. UU.'},
+  v5w:{pt:'Empresários · investidores · franqueados',en:'Entrepreneurs · investors · franchisees',es:'Empresarios · inversionistas · franquiciados'},
+  v6t:{pt:'Investidor Imigrante',en:'Immigrant Investor',es:'Inversionista Inmigrante'},
+  v6d:{pt:'Caminho para o green card por meio de investimento que gera empregos nos Estados Unidos.',en:'A path to the green card through an investment that creates U.S. jobs.',es:'Camino a la green card mediante una inversión que genera empleos en EE. UU.'},
+  v6w:{pt:'Investidores · famílias · capital',en:'Investors · families · capital',es:'Inversionistas · familias · capital'},
+
+  fed_titlea:{pt:'Imigração é lei federal.',en:'Immigration is federal law.',es:'La inmigración es ley federal.'},
+  fed_titleb:{pt:'Atuamos em todo o país.',en:'We serve clients nationwide.',es:'Atendemos en todo el país.'},
+  fed_text:{pt:'Como advogada de imigração licenciada, a Dra. Larissa Salvador representa clientes nos 50 estados — esteja você em qualquer lugar dos Estados Unidos ou no exterior.',
+            en:'As a licensed immigration attorney, Dr. Larissa Salvador represents clients across all 50 states — wherever you are, in the United States or abroad.',
+            es:'Como abogada de inmigración licenciada, la Dra. Larissa Salvador representa a clientes en los 50 estados — esté donde esté, en EE. UU. o en el exterior.'},
+
+  ab_eyebrow:{pt:'Quem lidera',en:'Who leads',es:'Quién lidera'},
+  ab_role:{pt:'Dra. Larissa Salvador',en:'Dr. Larissa Salvador',es:'Dra. Larissa Salvador'},
+  ab_p1:{pt:'Fundadora da Salvador Law, P.A. Advogada de imigração nos Estados Unidos, autora e palestrante, com mais de uma década dedicada à defesa dos direitos de imigrantes. Membro da American Immigration Lawyers Association (AILA).',
+         en:'Founder of Salvador Law, P.A. A U.S. immigration attorney, author and speaker, with over a decade devoted to defending immigrants’ rights. Member of the American Immigration Lawyers Association (AILA).',
+         es:'Fundadora de Salvador Law, P.A. Abogada de inmigración en EE. UU., autora y conferencista, con más de una década dedicada a la defensa de los inmigrantes. Miembro de AILA.'},
+  ab_p2:{pt:'Sua trajetória — de imigrante a advogada e empresária premiada — já foi destacada por veículos como Washington Post, Marie Claire, UOL, Terra e CBN, e reconhecida pelo National Black Lawyers (Top 40 Under 40), Lawyers of Distinction e Elite Lawyer.',
+         en:'Her journey — from immigrant to award-winning attorney and entrepreneur — has been featured by the Washington Post, Marie Claire, UOL, Terra and CBN, and recognized by the National Black Lawyers (Top 40 Under 40), Lawyers of Distinction and Elite Lawyer.',
+         es:'Su trayectoria — de inmigrante a abogada y empresaria premiada — ha sido destacada por Washington Post, Marie Claire, UOL, Terra y CBN, y reconocida por National Black Lawyers (Top 40 Under 40), Lawyers of Distinction y Elite Lawyer.'},
+
+  aw_eyebrow:{pt:'Prêmios & reconhecimentos',en:'Awards & recognition',es:'Premios y reconocimiento'},
+  aw_title:{pt:'Uma trajetória reconhecida',en:'A recognized track record',es:'Una trayectoria reconocida'},
+  aw_wp:{pt:'Most Influential Lawyers',en:'Most Influential Lawyers',es:'Most Influential Lawyers'},
+  aw_lod:{pt:'Excelência em Imigração',en:'Excellence in Immigration Law',es:'Excelencia en Inmigración'},
+  aw_el:{pt:'Elite Lawyer · Imigração',en:'Elite Lawyer · Immigration',es:'Elite Lawyer · Inmigración'},
+  aw_bb:{pt:'Top 10 Imigração · Flórida',en:'Top 10 Immigration · Florida',es:'Top 10 Inmigración · Florida'},
+  aw_cl:{pt:'Top Law Firms · EUA',en:'Top Law Firms · USA',es:'Top Law Firms · EE. UU.'},
+
+  pc_eyebrow:{pt:'Como trabalhamos',en:'How we work',es:'Cómo trabajamos'},
+  pc_titlea:{pt:'Um processo',en:'A process built on',es:'Un proceso de'},
+  pc_titleb:{pt:'conduzido com método.',en:'method and care.',es:'método y cuidado.'},
+  pc1t:{pt:'Avaliação estratégica',en:'Strategic assessment',es:'Evaluación estratégica'},
+  pc1d:{pt:'Analisamos o seu perfil e definimos os caminhos de visto mais sólidos para o seu caso.',en:'We analyze your profile and identify the strongest visa paths for your case.',es:'Analizamos su perfil e identificamos los caminos de visa más sólidos.'},
+  pc2t:{pt:'Plano de elegibilidade',en:'Eligibility plan',es:'Plan de elegibilidad'},
+  pc2d:{pt:'Estruturamos as evidências e a narrativa que sustentam a sua petição.',en:'We structure the evidence and narrative that support your petition.',es:'Estructuramos la evidencia y la narrativa que sustentan su petición.'},
+  pc3t:{pt:'Petição & documentação',en:'Petition & documentation',es:'Petición y documentación'},
+  pc3d:{pt:'Preparamos e protocolamos a petição com rigor técnico e atenção a cada detalhe.',en:'We prepare and file the petition with technical rigor and attention to detail.',es:'Preparamos y presentamos la petición con rigor técnico y atención al detalle.'},
+  pc4t:{pt:'Acompanhamento',en:'Follow-through',es:'Acompañamiento'},
+  pc4d:{pt:'Conduzimos o seu caso até a decisão, com comunicação clara em cada etapa.',en:'We guide your case through to the decision, with clear communication at every step.',es:'Conducimos su caso hasta la decisión, con comunicación clara en cada etapa.'},
+
+  ph_a:{pt:'Tratamos cada caso com a',en:'We treat every case with the',es:'Tratamos cada caso con la'},
+  ph_b:{pt:'estratégia, o rigor e a discrição',en:'strategy, rigor and discretion',es:'estrategia, el rigor y la discreción'},
+  ph_c:{pt:'que histórias extraordinárias merecem.',en:'that extraordinary stories deserve.',es:'que las historias extraordinarias merecen.'},
+
+  tg_badge:{pt:'Avaliação inicial · gratuita',en:'Free initial assessment',es:'Evaluación inicial · gratuita'},
+  tg_titlea:{pt:'Descubra para qual visto você tem',en:'Find out which visa you may',es:'Descubra para qué visa tiene'},
+  tg_titleb:{pt:'potencial — em minutos.',en:'qualify for — in minutes.',es:'potencial — en minutos.'},
+  tg_text:{pt:'Responda algumas perguntas e receba uma indicação dos caminhos mais prováveis para o seu perfil. Ao final, agende uma consulta com nossos advogados e garanta uma condição especial.',
+           en:'Answer a few questions and get an indication of the most likely paths for your profile. At the end, book a consultation and unlock a special offer.',
+           es:'Responda algunas preguntas y reciba una indicación de los caminos más probables para su perfil. Al final, agende una consulta y obtenga una condición especial.'},
+
+  ot_eyebrow:{pt:'Outras áreas de atuação',en:'Other practice areas',es:'Otras áreas de práctica'},
+  ot1:{pt:'Visto K-1 (noivo/noiva)',en:'K-1 (fiancé) visa',es:'Visa K-1 (prometido/a)'},
+  ot2:{pt:'Green card por casamento',en:'Marriage green card',es:'Green card por matrimonio'},
+  ot3:{pt:'Asilo',en:'Asylum',es:'Asilo'},
+  ot4:{pt:'VAWA',en:'VAWA',es:'VAWA'},
+  ot5:{pt:'Cidadania & naturalização',en:'Citizenship & naturalization',es:'Ciudadanía y naturalización'},
+
+  ct_eyebrow:{pt:'Fale conosco',en:'Get in touch',es:'Hable con nosotros'},
+  ct_titlea:{pt:'Vamos conversar sobre',en:'Let’s talk about',es:'Hablemos sobre'},
+  ct_titleb:{pt:'o seu caso.',en:'your case.',es:'su caso.'},
+  ct_phone:{pt:'Telefone & WhatsApp',en:'Phone & WhatsApp',es:'Teléfono & WhatsApp'},
+  ct_email:{pt:'E-mail',en:'Email',es:'Correo'},
+  ct_addr:{pt:'Endereço',en:'Address',es:'Dirección'},
+  cc_title:{pt:'O primeiro passo é uma conversa.',en:'The first step is a conversation.',es:'El primer paso es una conversación.'},
+  cc_text:{pt:'Conte-nos sobre o seu objetivo nos Estados Unidos. Nossa equipe responde com agilidade e total confidencialidade.',
+           en:'Tell us about your goal in the United States. Our team responds promptly and with full confidentiality.',
+           es:'Cuéntenos su objetivo en los Estados Unidos. Nuestro equipo responde con agilidad y total confidencialidad.'},
+
+  foot_copy:{pt:'© 2026 Salvador Law, P.A. — Immigration Law Practice',en:'© 2026 Salvador Law, P.A. — Immigration Law Practice',es:'© 2026 Salvador Law, P.A. — Immigration Law Practice'},
+  foot_disc:{pt:'Este site tem caráter informativo e não constitui aconselhamento jurídico. O contato inicial não cria relação advogado-cliente.',
+             en:'This website is for informational purposes only and does not constitute legal advice. Initial contact does not create an attorney-client relationship.',
+             es:'Este sitio es solo informativo y no constituye asesoramiento legal. El contacto inicial no crea una relación abogado-cliente.'}
+};
+let lang='pt';
+function apply(){document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(T[k])el.textContent=T[k][lang]||T[k].pt;});}
+document.getElementById('langs').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;lang=b.dataset.l;document.querySelectorAll('#langs button').forEach(x=>x.classList.toggle('on',x===b));apply();});
+const outlets=['Washington Post','Marie Claire','UOL','Terra','CBN','PEGN','Migalhas','Authority Magazine'];
+document.getElementById('track').innerHTML=[...outlets,...outlets].map(o=>`<span>${o}</span>`).join('');
+const hdr=document.getElementById('hdr');addEventListener('scroll',()=>hdr.classList.toggle('sc',scrollY>40),{passive:true});hdr.classList.toggle('sc',scrollY>40);
+const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');en.target.querySelectorAll('[data-count]').forEach(runCount);io.unobserve(en.target);}});},{threshold:.16});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+function runCount(el){const target=+el.getAttribute('data-count'),suf=el.getAttribute('data-suf')||'',dur=1500,t0=performance.now();(function s(t){const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(target*e)+(p===1?suf:'');if(p<1)requestAnimationFrame(s);})(performance.now());}
+/* parallax */
+const px=[...document.querySelectorAll('[data-parallax]')];
+let ticking=false;
+function par(){
+  const vh=innerHeight;
+  px.forEach(el=>{const r=el.getBoundingClientRect();const c=r.top+r.height/2;const off=(c-vh/2);const rate=parseFloat(el.dataset.parallax)||.1;el.style.transform='translate3d(0,'+(off*rate*-1).toFixed(1)+'px,0)';});
+  ticking=false;
+}
+addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(par);ticking=true;}},{passive:true});
+addEventListener('resize',par);par();
+apply();
+</script>
+</body>
+</html>
